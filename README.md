@@ -1,2 +1,2 @@
 # FleetPlayer
-A fast, light iOS video player by swift
+A fleet, light iOS video player by swift
