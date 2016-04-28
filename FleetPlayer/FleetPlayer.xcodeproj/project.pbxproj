@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B7475E721CCE2A4B00F05F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */; };
-		B7475E741CCE2A4B00F05F40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7475E731CCE2A4B00F05F40 /* ViewController.swift */; };
+		B7475E741CCE2A4B00F05F40 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */; };
 		B7475E771CCE2A4B00F05F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7475E751CCE2A4B00F05F40 /* Main.storyboard */; };
 		B7475E7A1CCE2A4B00F05F40 /* FleetPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7475E781CCE2A4B00F05F40 /* FleetPlayer.xcdatamodeld */; };
 		B7475E7C1CCE2A4B00F05F40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7475E7B1CCE2A4B00F05F40 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		B7475E6E1CCE2A4B00F05F40 /* FleetPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FleetPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7475E731CCE2A4B00F05F40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B7475E761CCE2A4B00F05F40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7475E791CCE2A4B00F05F40 /* FleetPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FleetPlayer.xcdatamodel; sourceTree = "<group>"; };
 		B7475E7B1CCE2A4B00F05F40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */,
-				B7475E731CCE2A4B00F05F40 /* ViewController.swift */,
+				B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */,
 				B7475E751CCE2A4B00F05F40 /* Main.storyboard */,
 				B7475E7B1CCE2A4B00F05F40 /* Assets.xcassets */,
 				B7475E7D1CCE2A4B00F05F40 /* LaunchScreen.storyboard */,
@@ -263,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7475E7A1CCE2A4B00F05F40 /* FleetPlayer.xcdatamodeld in Sources */,
-				B7475E741CCE2A4B00F05F40 /* ViewController.swift in Sources */,
+				B7475E741CCE2A4B00F05F40 /* VideoPlayerViewController.swift in Sources */,
 				B7475E721CCE2A4B00F05F40 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +491,7 @@
 				B7475E9B1CCE2A4B00F05F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7475E9C1CCE2A4B00F05F40 /* Build configuration list for PBXNativeTarget "FleetPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +500,7 @@
 				B7475E9E1CCE2A4B00F05F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7475E9F1CCE2A4B00F05F40 /* Build configuration list for PBXNativeTarget "FleetPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +509,7 @@
 				B7475EA11CCE2A4B00F05F40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
