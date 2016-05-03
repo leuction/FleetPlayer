@@ -12,10 +12,7 @@ import AVFoundation
 class VideoPlayerViewController: UIViewController {
     var avPlayer = AVPlayer()
     var avPlayerLayer: AVPlayerLayer!
-    var invisibleStartOrPauseButton = UIButton()
     var timeObserver: AnyObject!
-    //var timeRemainingLabel: UILabel = UILabel()
-    //var seekSlider: UISlider = UISlider()
     @IBOutlet weak var timePassedLabel: UILabel!
     @IBOutlet weak var seekSlider: UISlider!
     @IBOutlet weak var timeRemainingLabel: UILabel!
@@ -26,21 +23,20 @@ class VideoPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.blackColor()
         
         // add the player layer
         
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         view.layer.insertSublayer(avPlayerLayer, atIndex: 0)
         
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(VideoPlayerViewController.startOrPauseTheVideo(_:)))
+        doubleTap.numberOfTapsRequired = 2
+        self.view.addGestureRecognizer(doubleTap)
         
-        // double tap the screen to start or pause
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(VideoPlayerViewController.hideOrShowUserInterface(_:)))
+        self.view.addGestureRecognizer(singleTap)
+        singleTap.requireGestureRecognizerToFail(doubleTap)
         
-        view.addSubview(invisibleStartOrPauseButton)
-        invisibleStartOrPauseButton.addTarget(self, action: #selector(VideoPlayerViewController.invisibleStartOrPauseButtonDoubleTapped(_:)), forControlEvents: UIControlEvents.TouchDownRepeat)
-        
-        //tap to show or hide the user interface
-        invisibleStartOrPauseButton.addTarget(self, action: #selector(VideoPlayerViewController.hideTheUserInterface(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         
         //control the URL of the video source
         
@@ -83,34 +79,29 @@ class VideoPlayerViewController: UIViewController {
         
         // Layout subviews manually
         avPlayerLayer.frame = view.bounds
-        invisibleStartOrPauseButton.frame = view.bounds
-        
-//        let controlsHeight: CGFloat = 30
-//        let controlsY: CGFloat = view.bounds.size.height - controlsHeight;
-//        timeRemainingLabel.frame = CGRect(x: 5, y: controlsY, width: 60, height: controlsHeight)
-//        seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
-//                                  y: controlsY, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 5, height: controlsHeight)
-        
-        
         loadingIndicatorView.center = CGPoint(x: CGRectGetMidX(view.bounds), y: CGRectGetMidY(view.bounds))
     }
     
-    // called when the screen is double tapped to start or pause the video
+
     
-    func invisibleStartOrPauseButtonDoubleTapped(sender: UIButton!){
+    //double tap the view to start or pause the video
+    
+    func startOrPauseTheVideo(sender: UITapGestureRecognizer){
         let playerIsPlaying:Bool = avPlayer.rate > 0
         if(playerIsPlaying){
             avPlayer.pause()
         }else{
             avPlayer.play()
         }
+        
     }
     
-    // called when the screen is tapped to hide or show the user interface
+    //single tap to hide or show the user interface
     
-    func hideTheUserInterface(sender: UIButton!){
+    func hideOrShowUserInterface(sender: UITapGestureRecognizer){
         timeRemainingLabel.hidden = !timeRemainingLabel.hidden
         seekSlider.hidden = !seekSlider.hidden
+        timePassedLabel.hidden = !timePassedLabel.hidden
     }
     
     private func updateTimeLabel(elapsedTime: Float64, duration: Float64) {
@@ -119,14 +110,20 @@ class VideoPlayerViewController: UIViewController {
         timePassedLabel.text = String(format: "%02d:%02d", ((lround(elapsedTime) / 60) % 60), lround(elapsedTime) % 60)
     }
     
+    private func updateSeekSlider(elapsedTime: Float64, duration: Float64) {
+        let timeDuration: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration)
+        seekSlider.setValue(Float(elapsedTime / timeDuration), animated: true)
+    }
+    
     private func observeTime(elapsedTime: CMTime) {
         let duration = CMTimeGetSeconds(avPlayer.currentItem!.duration);
         if (isfinite(duration)) {
             let elapsedTime = CMTimeGetSeconds(elapsedTime)
             updateTimeLabel(elapsedTime, duration: duration)
+            updateSeekSlider(elapsedTime, duration: duration)
         }
     }
- 
+    
     @IBAction func sliderBeganTracking(sender: UISlider) {
         playerRateBeforeSeek = avPlayer.rate
         avPlayer.pause()
