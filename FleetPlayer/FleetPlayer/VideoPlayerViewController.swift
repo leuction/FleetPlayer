@@ -14,8 +14,11 @@ class VideoPlayerViewController: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
     var invisibleStartOrPauseButton = UIButton()
     var timeObserver: AnyObject!
-    var timeRemainingLabel: UILabel = UILabel()
-    var seekSlider: UISlider = UISlider()
+    //var timeRemainingLabel: UILabel = UILabel()
+    //var seekSlider: UISlider = UISlider()
+    @IBOutlet weak var timePassedLabel: UILabel!
+    @IBOutlet weak var seekSlider: UISlider!
+    @IBOutlet weak var timeRemainingLabel: UILabel!
     var playerRateBeforeSeek: Float = 0
     var loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     let playbackLikelyToKeepUpContext = UnsafeMutablePointer<(Void)>(nil)
@@ -41,7 +44,7 @@ class VideoPlayerViewController: UIViewController {
         
         //control the URL of the video source
         
-        let url = NSURL(string: "http://0.luxun.pro:12580/Kabaneri%20of%20the%20Iron%20fortress/%5BAirota%5D%5BKabaneri%20of%20the%20Iron%20fortress%5D%5B02%5D%5B1280x720%5D%5Bx264_AAC%5D%5BCHT%5D.mp4");
+        let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
         let playerItem = AVPlayerItem(URL: url!)
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
         
@@ -51,19 +54,6 @@ class VideoPlayerViewController: UIViewController {
                                                                    queue: dispatch_get_main_queue()) { (elapsedTime: CMTime)-> Void in
                                                                     self.observeTime(elapsedTime)
         }
-        timeRemainingLabel.textColor = UIColor.whiteColor()
-        view.addSubview(timeRemainingLabel);
-        
-        // add the slider to show the progress
-        view.addSubview(seekSlider)
-        seekSlider.addTarget(self, action: #selector(VideoPlayerViewController.sliderBeganTracking(_:)),
-                             forControlEvents: UIControlEvents.TouchDown)
-        seekSlider.addTarget(self, action: #selector(VideoPlayerViewController.sliderEndedTracking(_:)),
-                             forControlEvents: UIControlEvents.TouchUpInside)
-        seekSlider.addTarget(self, action: #selector(VideoPlayerViewController.sliderEndedTracking(_:)),
-                             forControlEvents: UIControlEvents.TouchUpOutside)
-        seekSlider.addTarget(self, action: #selector(VideoPlayerViewController.sliderValueChanged(_:)),
-                             forControlEvents: UIControlEvents.ValueChanged)
         loadingIndicatorView.hidesWhenStopped = true
         view.addSubview(loadingIndicatorView)
         avPlayer.addObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp",
@@ -94,11 +84,14 @@ class VideoPlayerViewController: UIViewController {
         // Layout subviews manually
         avPlayerLayer.frame = view.bounds
         invisibleStartOrPauseButton.frame = view.bounds
-        let controlsHeight: CGFloat = 30
-        let controlsY: CGFloat = view.bounds.size.height - controlsHeight;
-        timeRemainingLabel.frame = CGRect(x: 5, y: controlsY, width: 60, height: controlsHeight)
-        seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
-                                  y: controlsY, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 5, height: controlsHeight)
+        
+//        let controlsHeight: CGFloat = 30
+//        let controlsY: CGFloat = view.bounds.size.height - controlsHeight;
+//        timeRemainingLabel.frame = CGRect(x: 5, y: controlsY, width: 60, height: controlsHeight)
+//        seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
+//                                  y: controlsY, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 5, height: controlsHeight)
+        
+        
         loadingIndicatorView.center = CGPoint(x: CGRectGetMidX(view.bounds), y: CGRectGetMidY(view.bounds))
     }
     
@@ -123,6 +116,7 @@ class VideoPlayerViewController: UIViewController {
     private func updateTimeLabel(elapsedTime: Float64, duration: Float64) {
         let timeRemaining: Float64 = CMTimeGetSeconds(avPlayer.currentItem!.duration) - elapsedTime
         timeRemainingLabel.text = String(format: "%02d:%02d", ((lround(timeRemaining) / 60) % 60), lround(timeRemaining) % 60)
+        timePassedLabel.text = String(format: "%02d:%02d", ((lround(elapsedTime) / 60) % 60), lround(elapsedTime) % 60)
     }
     
     private func observeTime(elapsedTime: CMTime) {
@@ -132,12 +126,13 @@ class VideoPlayerViewController: UIViewController {
             updateTimeLabel(elapsedTime, duration: duration)
         }
     }
-    func sliderBeganTracking(slider: UISlider!) {
+ 
+    @IBAction func sliderBeganTracking(sender: UISlider) {
         playerRateBeforeSeek = avPlayer.rate
         avPlayer.pause()
     }
     
-    func sliderEndedTracking(slider: UISlider!) {
+    @IBAction func sliderEndedTracking(sender: UISlider) {
         let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
         let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
         updateTimeLabel(elapsedTime, duration: videoDuration)
@@ -149,11 +144,12 @@ class VideoPlayerViewController: UIViewController {
         }
     }
     
-    func sliderValueChanged(slider: UISlider!) {
+    @IBAction func sliderValueChanged(sender: UISlider) {
         let videoDuration = CMTimeGetSeconds(avPlayer.currentItem!.duration)
         let elapsedTime: Float64 = videoDuration * Float64(seekSlider.value)
         updateTimeLabel(elapsedTime, duration: videoDuration)
     }
+    
     
     deinit {
         avPlayer.removeTimeObserver(timeObserver)
