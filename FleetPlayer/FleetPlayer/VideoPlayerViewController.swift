@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 
 class VideoPlayerViewController: UIViewController {
+    var isInternetVideoSource = false
+    var playerItem: AVPlayerItem!
     var avPlayer = AVPlayer()
     var avPlayerLayer: AVPlayerLayer!
     var timeObserver: AnyObject!
@@ -20,6 +22,9 @@ class VideoPlayerViewController: UIViewController {
     var loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     let playbackLikelyToKeepUpContext = UnsafeMutablePointer<(Void)>(nil)
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +45,18 @@ class VideoPlayerViewController: UIViewController {
         
         //control the URL of the video source
         
-        let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
-        let playerItem = AVPlayerItem(URL: url!)
+        if isInternetVideoSource
+        {
+            let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
+            playerItem = AVPlayerItem(URL: url!)
+        }else{
+            let fileManager = NSFileManager.defaultManager()
+            if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
+                let url = docsDir.URLByAppendingPathComponent("video.mp4")
+                playerItem = AVPlayerItem(URL: url)
+            }
+        }
+        
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
         
         //obverse the time of the player
