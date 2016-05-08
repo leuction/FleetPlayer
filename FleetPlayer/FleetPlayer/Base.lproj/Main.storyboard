@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="296"/>
+            <point key="canvasLocation" x="207" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Ay-TS-8ku">
@@ -226,11 +226,12 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="BMX-S2-4yE" id="jHL-8y-WFR"/>
                         <outlet property="collectionView" destination="Cqo-hM-w55" id="aTh-7B-uBr"/>
+                        <segue destination="ZHA-vu-1Mj" kind="show" identifier="ShowVideoPlayer" id="FrK-mf-Gek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP7-j3-GLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14" y="556"/>
+            <point key="canvasLocation" x="-530" y="-396"/>
         </scene>
     </scenes>
     <resources>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -29,21 +29,13 @@ class HomeViewController: UIViewController {
     private var videoInformation = VideoInformation.travelsalAllFilesInDocument()
 
     @IBAction func showPath(sender: UIButton) {
-        //假设用户文档下有如下文件和文件夹[test1.txt,fold1/test2.txt]
+        
         let manager = NSFileManager.defaultManager()
         let urlForDocument = manager.URLsForDirectory( .DocumentDirectory, inDomains:.UserDomainMask)
         let url = urlForDocument[0] as NSURL
         
-        //（1）对指定路径执行浅搜索，返回指定目录路径下的文件、子目录及符号链接的列表
-        let contentsOfPath = try? manager.contentsOfDirectoryAtPath(url.path!)
-        //contentsOfPath：Optional([fold1, test1.txt])
-        //print("contentsOfPath: \(contentsOfPath)")
-        
-        //（2）类似上面的，对指定路径执行浅搜索，返回指定目录路径下的文件、子目录及符号链接的列表
         let contentsOfURL = try? manager.contentsOfDirectoryAtURL(url, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles);
-        //contentsOfURL：Optional([file://Users/.../Application/.../Documents/fold1/,
-        // file://Users/.../Application/.../Documents/test1.txt])
-        //print("contentsOfURL: \(contentsOfURL)")
+
         
         if let notEmptyContentsOfURL = contentsOfURL{
             for videoContentsOfURL in notEmptyContentsOfURL {
@@ -54,23 +46,49 @@ class HomeViewController: UIViewController {
         }
         
     }
-}
-
-
-extension HomeViewController: UICollectionViewDataSource{
     
+    //MARK: - UICollectionViewDelegate
+    
+    private struct Storyboard {
+        static let cellReuseIdentifier = "VideoCell"
+        static let showVideoPlayer = "ShowVideoPlayer"
+    }
+
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return videoInformation.count
+        return videoInformation.count
     }
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    //it will crash when the videoInformaion is nil
-    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("VideoCell", forIndexPath: indexPath) as! HomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! HomeCollectionViewCell
         cell.videoInformation = self.videoInformation[indexPath.item]
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let newVideoInfomation = videoInformation[indexPath.item]
+        performSegueWithIdentifier(Storyboard.showVideoPlayer, sender: newVideoInfomation)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destination = segue.destinationViewController
+        if let navCon = destination as? UINavigationController{
+            destination = navCon.visibleViewController!
+        }
+
+        if let identifier = segue.identifier{
+            if identifier == Storyboard.showVideoPlayer {
+                if let vpvc = destination as? VideoPlayerViewController{
+                    vpvc.isInternetVideoSource = false
+                    vpvc.videoInformation = sender as? VideoInformation
+                }
+            }
+        }
+    }
+    
+
+
 }

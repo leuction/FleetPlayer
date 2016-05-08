@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class VideoPlayerViewController: UIViewController {
+    var videoInformation: VideoInformation!
     var isInternetVideoSource = false
     var playerItem: AVPlayerItem!
     var avPlayer = AVPlayer()
@@ -50,11 +51,12 @@ class VideoPlayerViewController: UIViewController {
             let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
             playerItem = AVPlayerItem(URL: url!)
         }else{
-            let fileManager = NSFileManager.defaultManager()
-            if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
-                let url = docsDir.URLByAppendingPathComponent("video.mp4")
-                playerItem = AVPlayerItem(URL: url)
-            }
+//            let fileManager = NSFileManager.defaultManager()
+//            if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
+//                let url = docsDir.URLByAppendingPathComponent("video.mp4")
+            let url = videoInformation.url
+            playerItem = AVPlayerItem(URL: url)
+            //}
         }
         
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)

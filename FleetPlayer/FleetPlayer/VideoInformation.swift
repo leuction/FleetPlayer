@@ -8,37 +8,26 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class VideoInformation
 {//the description of video
     
     
     var title = ""
-    var description = ""
     var featuredImage: UIImage!
     var url: NSURL!
     
-    init(title: String, description :String, featuredImage: UIImage!, url: NSURL!)
+    init(title: String, featuredImage: UIImage!, url: NSURL!)
     {
         self.title = title
-        self.description = description
         self.featuredImage = featuredImage
         self.url = url
     }
     
-    //MARK: - Test
-//    static func createInformation() -> [VideoInformation]
-//    {
-//        return[
-//            VideoInformation(title: "the first one", description: "yes we can", featuredImage: UIImage(named: "p1")),
-//            VideoInformation(title: "the second one", description: "ass we can", featuredImage: UIImage(named: "p2"))
-//        ]
-//    }
-    
     static func travelsalAllFilesInDocument() -> [VideoInformation]
     {
         var videoInformation: [VideoInformation] = []
-        
         let manager = NSFileManager.defaultManager()
         let urlForDocument = manager.URLsForDirectory( .DocumentDirectory, inDomains:.UserDomainMask)
         let url = urlForDocument[0] as NSURL
@@ -46,30 +35,27 @@ class VideoInformation
         if let notEmptyContentsOfURL = contentsOfURL{
             for videoContentsOfURL in notEmptyContentsOfURL {
                 if videoContentsOfURL.pathExtension! == "mp4" {
-                    let newVideoInformation = VideoInformation(title: videoContentsOfURL.URLByDeletingPathExtension!.lastPathComponent!, description: "test", featuredImage: UIImage(named: "p1"), url: videoContentsOfURL)
+                    
+                    
+                    let newVideoInformation = VideoInformation(title: videoContentsOfURL.URLByDeletingPathExtension!.lastPathComponent!, featuredImage: thumbnailOfVideoForURL(videoContentsOfURL)!, url: videoContentsOfURL)
                     videoInformation.append(newVideoInformation)
                 }
             }
         }
-        
-        for a in videoInformation {
-            print(a.title)
-        }
-        
         return videoInformation
     }
     
-    
-//    func saveVideoFiles() {
-//        let fileManager = NSFileManager()
-//        if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
-//            let unique = NSDate.timeIntervalSinceReferenceDate()
-//            let url = docsDir.URLByAppendingPathComponent("\(unique).jpg")
-//            if let path = url.absoluteString{
-//                
-//            }
-//        }
-//    }
-    
+    static func thumbnailOfVideoForURL(url: NSURL) -> UIImage?{
+        let asset = AVAsset(URL: url)
+        let assetImgGenerate = AVAssetImageGenerator(asset: asset)
+        assetImgGenerate.appliesPreferredTrackTransform = true
+        let time = CMTimeMake(asset.duration.value / 3, asset.duration.timescale)
+        if let cgImage = try? assetImgGenerate.copyCGImageAtTime(time, actualTime: nil) {
+            return UIImage(CGImage: cgImage)
+        }else{
+            return nil
+        }
+    }
+
     
 }
