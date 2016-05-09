@@ -18,14 +18,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        navigationController?.navigationBar.translucent = true
+        navigationController?.navigationBar.barStyle = UIBarStyle.BlackTranslucent
+        
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.editVideoFiles(_:)))
+        longPress.minimumPressDuration = 1.0;
+        self.collectionView.addGestureRecognizer(longPress)
+        
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
 
         // Do any additional setup after loading the view.
         
     }
-    
-    
+
     private var videoInformation = VideoInformation.travelsalAllFilesInDocument()
 
     @IBAction func showPath(sender: UIButton) {
@@ -46,6 +54,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         
     }
+    
+    func editVideoFiles(sender: UILongPressGestureRecognizer) {
+        print("long press")
+    }
+    
+    
+    
     
     //MARK: - UICollectionViewDelegate
     
@@ -74,13 +89,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destination = segue.destinationViewController
-        if let navCon = destination as? UINavigationController{
-            destination = navCon.visibleViewController!
-        }
-
         if let identifier = segue.identifier{
             if identifier == Storyboard.showVideoPlayer {
+                let destination = segue.destinationViewController
                 if let vpvc = destination as? VideoPlayerViewController{
                     vpvc.isInternetVideoSource = false
                     vpvc.videoInformation = sender as? VideoInformation
@@ -88,7 +99,4 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
-    
-
-
 }

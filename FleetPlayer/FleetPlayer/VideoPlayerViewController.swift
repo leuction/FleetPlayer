@@ -51,12 +51,8 @@ class VideoPlayerViewController: UIViewController {
             let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
             playerItem = AVPlayerItem(URL: url!)
         }else{
-//            let fileManager = NSFileManager.defaultManager()
-//            if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first {
-//                let url = docsDir.URLByAppendingPathComponent("video.mp4")
             let url = videoInformation.url
             playerItem = AVPlayerItem(URL: url)
-            //}
         }
         
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
@@ -119,6 +115,11 @@ class VideoPlayerViewController: UIViewController {
         timeRemainingLabel.hidden = !timeRemainingLabel.hidden
         seekSlider.hidden = !seekSlider.hidden
         timePassedLabel.hidden = !timePassedLabel.hidden
+        if (navigationController?.navigationBarHidden)!{
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }else{
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        }
     }
     
     private func updateTimeLabel(elapsedTime: Float64, duration: Float64) {
@@ -164,8 +165,11 @@ class VideoPlayerViewController: UIViewController {
         updateTimeLabel(elapsedTime, duration: videoDuration)
     }
     
-    
+    override func viewWillDisappear(animated: Bool) {
+        avPlayer.pause()
+    }
     deinit {
+        print("deinit")
         avPlayer.removeTimeObserver(timeObserver)
         avPlayer.removeObserver(self, forKeyPath: "currentItem.playbackLikelyToKeepUp")
     }
