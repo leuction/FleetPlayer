@@ -57,7 +57,7 @@ class VideoPlayerViewController: UIViewController {
         
         avPlayer.replaceCurrentItemWithPlayerItem(playerItem)
         
-        //obverse the time of the player
+        //observe the time of the player
         let timeInterval: CMTime = CMTimeMakeWithSeconds(1.0, 10)
         timeObserver = avPlayer.addPeriodicTimeObserverForInterval(timeInterval,
                                                                    queue: dispatch_get_main_queue()) { (elapsedTime: CMTime)-> Void in

@@ -35,8 +35,6 @@ class VideoInformation
         if let notEmptyContentsOfURL = contentsOfURL{
             for videoContentsOfURL in notEmptyContentsOfURL {
                 if videoContentsOfURL.pathExtension! == "mp4" {
-                    
-                    
                     let newVideoInformation = VideoInformation(title: videoContentsOfURL.URLByDeletingPathExtension!.lastPathComponent!, featuredImage: thumbnailOfVideoForURL(videoContentsOfURL)!, url: videoContentsOfURL)
                     videoInformation.append(newVideoInformation)
                 }
