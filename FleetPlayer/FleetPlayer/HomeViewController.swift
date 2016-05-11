@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
 
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -24,7 +24,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.editVideoFiles(_:)))
-        longPress.minimumPressDuration = 1.0;
+        longPress.minimumPressDuration = 1.0
+        longPress.allowableMovement = 15
+        longPress.numberOfTouchesRequired = 1
         self.collectionView.addGestureRecognizer(longPress)
         
         collectionView.showsVerticalScrollIndicator = false
@@ -32,31 +34,29 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         // Do any additional setup after loading the view.
         
+        // prevent the collection view be blocked by th navigation bar
+        self.edgesForExtendedLayout = UIRectEdge.None
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     private var videoInformation = VideoInformation.travelsalAllFilesInDocument()
-
-    @IBAction func showPath(sender: UIButton) {
-        
-        let manager = NSFileManager.defaultManager()
-        let urlForDocument = manager.URLsForDirectory( .DocumentDirectory, inDomains:.UserDomainMask)
-        let url = urlForDocument[0] as NSURL
-        
-        let contentsOfURL = try? manager.contentsOfDirectoryAtURL(url, includingPropertiesForKeys: nil, options: NSDirectoryEnumerationOptions.SkipsHiddenFiles);
-
-        
-        if let notEmptyContentsOfURL = contentsOfURL{
-            for videoContentsOfURL in notEmptyContentsOfURL {
-                if videoContentsOfURL.pathExtension! == "mp4" {
-                    print(videoContentsOfURL.URLByDeletingPathExtension!.lastPathComponent!)
-                }
-            }
-        }
-        
-    }
+    //private var videoInformation = [VideoInformation(title: "1", featuredImage: UIImage(named: "p2"), url: NSURL(fileURLWithPath: "123"))]
     
     func editVideoFiles(sender: UILongPressGestureRecognizer) {
-        print("long press")
+        if sender.state == UIGestureRecognizerState.Began{
+//            let p:CGPoint = sender.locationInView(self.collectionView)
+//            let index: NSIndexPath = self.collectionView.indexPathForItemAtPoint(p)!
+//            if let cell = self.collectionView.cellForItemAtIndexPath(index) as? HomeCollectionViewCell {
+//                cell.isEditable = true
+//            }
+//            print("long press")
+            
+            for cell in (self.collectionView.visibleCells() as? [HomeCollectionViewCell])!{
+                
+                cell.isEditable = true
+            
+            }
+        }
     }
     
     
@@ -79,6 +79,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! HomeCollectionViewCell
         cell.videoInformation = self.videoInformation[indexPath.item]
+        cell.isEditable = false
         return cell
     }
     
@@ -87,6 +88,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let newVideoInfomation = videoInformation[indexPath.item]
         performSegueWithIdentifier(Storyboard.showVideoPlayer, sender: newVideoInfomation)
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier{
@@ -98,5 +100,40 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
             }
         }
+    }
+    @IBAction func deleteItems(sender: UIButton) {
+        let alertController = UIAlertController(title: "Are you sure?", message: "delete file", preferredStyle: UIAlertControllerStyle.Alert)
+        let cancelAction = UIAlertAction(title: "cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        let okAction = UIAlertAction(title: "confirm", style: UIAlertActionStyle.Destructive) { (action) in
+            let p = sender.convertRect(sender.bounds, toView: self.collectionView)
+            print(p)
+            if let indexPath = self.collectionView.indexPathForItemAtPoint(p.origin){
+                let success = VideoInformation.deleteFilesForURL(self.videoInformation[indexPath.item].url)
+                if success {
+                    self.videoInformation = VideoInformation.travelsalAllFilesInDocument()
+                    self.collectionView.reloadData()
+                }else {
+                    let errorAlert = UIAlertController(title: "Deletion Failed", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+                    let confirmAction = UIAlertAction(title: "confirm", style: UIAlertActionStyle.Default, handler: nil)
+                    errorAlert.addAction(confirmAction)
+                    self.presentViewController(errorAlert, animated: true, completion: nil)
+                }
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+
+    }
+}
+
+//check out the error in AutoLayout
+
+extension NSLayoutConstraint {
+    
+    override public var description: String {
+        let id = identifier ?? ""
+        return "id: \(id), constant: \(constant)" //you may print whatever you want here
     }
 }

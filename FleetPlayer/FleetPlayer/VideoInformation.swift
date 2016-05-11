@@ -54,6 +54,14 @@ class VideoInformation
             return nil
         }
     }
-
     
+    static func deleteFilesForURL(url: NSURL) -> Bool{
+        let fileManager = NSFileManager.defaultManager()
+        do{
+            try fileManager.removeItemAtURL(url)
+            return true
+        }catch{
+            return false
+        }
+    }    
 }

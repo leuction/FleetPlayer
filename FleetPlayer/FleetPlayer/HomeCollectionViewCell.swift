@@ -10,18 +10,36 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    let imageWidth: CGFloat = 260
+    
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     
-    var videoInformation: VideoInformation!{
-        didSet{
+    var isEditable:Bool = false {
+        didSet {
             updateUI()
         }
     }
     
+    var videoInformation: VideoInformation!{
+        didSet {
+            updateUI()
+        }
+    }
     func updateUI(){
         videoImage.image! = videoInformation.featuredImage
         videoImage.contentMode = .ScaleAspectFill
         videoTitle.text! = videoInformation.title
+        if isEditable{
+            deleteButton.hidden = false
+        } else {
+            deleteButton.hidden = true
+        }
+        print(videoImage.frame.width / videoImage.frame.height)
     }
+    
+    
+    
+    
 }

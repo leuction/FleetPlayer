@@ -168,6 +168,9 @@ class VideoPlayerViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         avPlayer.pause()
     }
+    
+    
+    
     deinit {
         print("deinit")
         avPlayer.removeTimeObserver(timeObserver)
