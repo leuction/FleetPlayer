@@ -9,8 +9,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
-
-    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,10 +22,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.editVideoFiles(_:)))
-        longPress.minimumPressDuration = 1.0
+        longPress.minimumPressDuration = 0.5
         longPress.allowableMovement = 15
         longPress.numberOfTouchesRequired = 1
         self.collectionView.addGestureRecognizer(longPress)
+        
+        let cancelEditable = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.cancelEditVideoFiles(_:)))
+        self.view.addGestureRecognizer(cancelEditable)
+        cancelEditable.delegate = self
+        
         
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
@@ -55,6 +58,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 
                 cell.isEditable = true
             
+            }
+        }
+    }
+    
+    func cancelEditVideoFiles(sender: UITapGestureRecognizer) {
+        for cell in (self.collectionView.visibleCells() as? [HomeCollectionViewCell])! {
+            if cell.isEditable {
+                cell.isEditable = false
             }
         }
     }
@@ -123,8 +134,15 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         self.presentViewController(alertController, animated: true, completion: nil)
-        
-
+    }
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        let p: CGPoint =  touch.locationInView(self.view)
+        for cell in self.collectionView.visibleCells(){
+            if CGRectContainsPoint(cell.frame, p) {
+                return false
+            }
+        }
+        return true
     }
 }
 
