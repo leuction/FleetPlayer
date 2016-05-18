@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0967FD797BDF9D71858017DC813592 /* MMDrawerController+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC175191D29702AB596FEF86E9BAD2EF /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1BE96D5AFB6BBFAF480F345B769B438A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D14E6771B4C6EAC4C0A1D3D507F7A0 /* MMDrawerBarButtonItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADB96113EE88258872A9C18F105CC4D /* MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32665EA5A2266C8C46ED31C38E1C717B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0F369A6FD48C8B59CA6BD9E9873D31 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3BADCD67D098AC27F5279C7DE8ABA4F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		49693EA9DF0E0895C45A690C0BA47402 /* Pods-FleetPlayerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6E4533727D6F9D64475B89697A59A7 /* Pods-FleetPlayerUITests-dummy.m */; };
+		4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64816E4541904F8CCA4C22A1F3DB077F /* MMDrawerController-dummy.m */; };
+		5B58F28F1DB21F877D737EE5787438DE /* Pods-FleetPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E780545D329C28BF25095129BBB6A9FF /* Pods-FleetPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EEE04DBF803BBDE79530E2603E0D13 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		82E7EC8C06F241D037DCA5ECC777B463 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D03B5E9CF096B3ABD5A214D79ABA1 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8C862C688C8554E261ACF8A3D87CAA77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */; };
+		A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = C339E1A586DC433AB7D1CD97C5AB0E04 /* MMDrawerVisualState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA31BDB358AA3DB5C5713B7BBDFD97A6 /* MMDrawerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5F6C6B453AF24E19708028B08F18CD8 /* Pods-FleetPlayerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 420636594C6473805E110103A3EB1948 /* Pods-FleetPlayerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C12275778E35458AC23F5F68706A44D2 /* Pods-FleetPlayerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3127DA59B28AFDF90F05122A78E17119 /* Pods-FleetPlayerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = FB83686ED4EF30E64EE94A44CD0DE8BF /* UIViewController+MMDrawerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F72DC0DC15510997942C1D4DA96D4AD4 /* Pods-FleetPlayerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB68C786B03AE14EA20DC9B4C47715B7 /* Pods-FleetPlayerTests-dummy.m */; };
+		FC3BE78766D1EDD211A7FEE5419F21ED /* Pods-FleetPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0980F898C8927A80A4908510067FE78 /* Pods-FleetPlayer-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6D41C9B29778ACAA731DE5A44B6138D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96D3562E47E4792B0A6093A0323EB398;
+			remoteInfo = MMDrawerController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0156781BD54D08196D7CC7A13B5FCEC0 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
+		02DC0AB35A94F69B92E2710BA0C3D498 /* Pods-FleetPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		048536F4F74DC8896BB0C10A56D939E8 /* Pods_FleetPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C4B8EE4EFDF25736761369ED4E5895 /* Pods-FleetPlayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FleetPlayer-acknowledgements.plist"; sourceTree = "<group>"; };
+		0E31B7DA94411AB3F6B1AD1E168CB43F /* Pods-FleetPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FleetPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		108985B01C6CC4CB53C8106C2E5B6B02 /* Pods-FleetPlayerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FleetPlayerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		18B1C22AF8BBB6CD51E880B195E6AE8D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF4887878A7E8B87E842F22BAE92681 /* Pods_FleetPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A0AEFB4F164BBEB8D8DD0178EDB598 /* MMDrawerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMDrawerController.modulemap; sourceTree = "<group>"; };
+		244D8E925E6C812E2E9707942F71306E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C2AB7131B10AA7609C3407806620EDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5FD73AEA870DE8B98FD11056FC73BF /* Pods-FleetPlayerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3127DA59B28AFDF90F05122A78E17119 /* Pods-FleetPlayerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FleetPlayerTests-umbrella.h"; sourceTree = "<group>"; };
+		31C75950421C6F43D4DB28FF00C53B6B /* Pods_FleetPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3902BD670B40E0DA7C565A3DD855CFA6 /* Pods-FleetPlayerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayerTests-frameworks.sh"; sourceTree = "<group>"; };
+		3AD5706367AC539142FF8C1BCBC99FB2 /* Pods-FleetPlayer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayer-resources.sh"; sourceTree = "<group>"; };
+		420636594C6473805E110103A3EB1948 /* Pods-FleetPlayerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FleetPlayerUITests-umbrella.h"; sourceTree = "<group>"; };
+		482DE86642E6B4EC8EE28571E3B4765D /* Pods-FleetPlayerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayerUITests-resources.sh"; sourceTree = "<group>"; };
+		4A9D03B5E9CF096B3ABD5A214D79ABA1 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		5D46D5FFDE0F8C98C47384113CCD6842 /* Pods-FleetPlayerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FleetPlayerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		64816E4541904F8CCA4C22A1F3DB077F /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		652C54CAC4A01BAAF3C26F084FD48BB5 /* MMDrawerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMDrawerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		656B7739A338CE17A99F5C6EB8445808 /* Pods-FleetPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		6ADB96113EE88258872A9C18F105CC4D /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		6B046B9266A41ECE75F829589484F860 /* Pods-FleetPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F6DE4A8DC26614685E59ED8FECD1556 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		76D14E6771B4C6EAC4C0A1D3D507F7A0 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		7D0967FD797BDF9D71858017DC813592 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		82A3C97FF135CA8351EE4DD771D506B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F6E4533727D6F9D64475B89697A59A7 /* Pods-FleetPlayerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FleetPlayerUITests-dummy.m"; sourceTree = "<group>"; };
+		8F72138911AB906B96A699D9711E7001 /* Pods-FleetPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97EEE04DBF803BBDE79530E2603E0D13 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		9D3090F2C5A4B630E04C73FD0A84409C /* Pods-FleetPlayerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayerTests-resources.sh"; sourceTree = "<group>"; };
+		A0980F898C8927A80A4908510067FE78 /* Pods-FleetPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FleetPlayer-dummy.m"; sourceTree = "<group>"; };
+		AAFFD15712802F951B0CFA05DFFF9B67 /* Pods-FleetPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA31BDB358AA3DB5C5713B7BBDFD97A6 /* MMDrawerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-umbrella.h"; sourceTree = "<group>"; };
+		BC175191D29702AB596FEF86E9BAD2EF /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		BF0F369A6FD48C8B59CA6BD9E9873D31 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		C339E1A586DC433AB7D1CD97C5AB0E04 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		C911A1FBA45149DDEFFECE09E0BBDA76 /* Pods-FleetPlayerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FleetPlayerUITests.modulemap"; sourceTree = "<group>"; };
+		CC6A41B574D1557AFB2037E450B4B295 /* Pods-FleetPlayerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FleetPlayerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CE29CFE16803D2655F4E0CA91EB72539 /* Pods-FleetPlayerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FleetPlayerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D39D76AC4446B707B244177968390E37 /* Pods-FleetPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FleetPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D4CDFF84BF113CADEFE7540B6E3E1C26 /* Pods-FleetPlayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FleetPlayer-frameworks.sh"; sourceTree = "<group>"; };
+		DAE4EB4EF4812BD92F87D168E1D7DC1D /* Pods-FleetPlayerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FleetPlayerTests.modulemap"; sourceTree = "<group>"; };
+		DD1ADF59A37CB05FB66BB030D05C1CEE /* Pods-FleetPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FleetPlayer.modulemap"; sourceTree = "<group>"; };
+		E780545D329C28BF25095129BBB6A9FF /* Pods-FleetPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FleetPlayer-umbrella.h"; sourceTree = "<group>"; };
+		EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FB68C786B03AE14EA20DC9B4C47715B7 /* Pods-FleetPlayerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FleetPlayerTests-dummy.m"; sourceTree = "<group>"; };
+		FB83686ED4EF30E64EE94A44CD0DE8BF /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70AD8E29B59EE7EACA412A626DD65A48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BADCD67D098AC27F5279C7DE8ABA4F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8128762267F6C04D47E8E65F4E261934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE96D5AFB6BBFAF480F345B769B438A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98C51271A2160D33EE00126B25D3631A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E7EC8C06F241D037DCA5ECC777B463 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE46F03F680D2CA1FFC849F4A1D92B53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32665EA5A2266C8C46ED31C38E1C717B /* Foundation.framework in Frameworks */,
+				8C862C688C8554E261ACF8A3D87CAA77 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0160AEF056E6B2D053A5A6561DF34C73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18B1C22AF8BBB6CD51E880B195E6AE8D /* Info.plist */,
+				22A0AEFB4F164BBEB8D8DD0178EDB598 /* MMDrawerController.modulemap */,
+				0156781BD54D08196D7CC7A13B5FCEC0 /* MMDrawerController.xcconfig */,
+				64816E4541904F8CCA4C22A1F3DB077F /* MMDrawerController-dummy.m */,
+				6F6DE4A8DC26614685E59ED8FECD1556 /* MMDrawerController-prefix.pch */,
+				BA31BDB358AA3DB5C5713B7BBDFD97A6 /* MMDrawerController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMDrawerController";
+			sourceTree = "<group>";
+		};
+		188B896382982B07CCD5903DBE442EF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF4BD2AA4442A43AF9633F52CCA632 /* MMDrawerController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2FDF4BD2AA4442A43AF9633F52CCA632 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				B49D6952197F2166796788CEFC5BC44E /* Core */,
+				3C2AD43EF953A855D719E9F81ED50110 /* MMDrawerBarButtonItem */,
+				AFCA985C22DD6BEB769646CF41851AAC /* MMDrawerVisualStates */,
+				3F7A173247D936B0753D02679B88D8C2 /* Subclass */,
+				0160AEF056E6B2D053A5A6561DF34C73 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		3C2AD43EF953A855D719E9F81ED50110 /* MMDrawerBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				76D14E6771B4C6EAC4C0A1D3D507F7A0 /* MMDrawerBarButtonItem.h */,
+				BC175191D29702AB596FEF86E9BAD2EF /* MMDrawerBarButtonItem.m */,
+			);
+			name = MMDrawerBarButtonItem;
+			sourceTree = "<group>";
+		};
+		3F7A173247D936B0753D02679B88D8C2 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89F803C7E2D77E11F2120CB28FE0B795 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FFC5AC3153970C8C75E875444DD7AF7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A20919820BF0DEE3A6C2FC2D50AE7A39 /* Pods-FleetPlayer */,
+				B0070509B7A23FC0E2F265D3A0FC602F /* Pods-FleetPlayerTests */,
+				B2FB78D9D3DCBCAD0E614BA4C702E769 /* Pods-FleetPlayerUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				188B896382982B07CCD5903DBE442EF7 /* Pods */,
+				B0E2A1410F3708180AF257BB7396AEB1 /* Products */,
+				6FFC5AC3153970C8C75E875444DD7AF7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89F803C7E2D77E11F2120CB28FE0B795 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */,
+				EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A20919820BF0DEE3A6C2FC2D50AE7A39 /* Pods-FleetPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2C2AB7131B10AA7609C3407806620EDA /* Info.plist */,
+				DD1ADF59A37CB05FB66BB030D05C1CEE /* Pods-FleetPlayer.modulemap */,
+				0E31B7DA94411AB3F6B1AD1E168CB43F /* Pods-FleetPlayer-acknowledgements.markdown */,
+				09C4B8EE4EFDF25736761369ED4E5895 /* Pods-FleetPlayer-acknowledgements.plist */,
+				A0980F898C8927A80A4908510067FE78 /* Pods-FleetPlayer-dummy.m */,
+				D4CDFF84BF113CADEFE7540B6E3E1C26 /* Pods-FleetPlayer-frameworks.sh */,
+				3AD5706367AC539142FF8C1BCBC99FB2 /* Pods-FleetPlayer-resources.sh */,
+				E780545D329C28BF25095129BBB6A9FF /* Pods-FleetPlayer-umbrella.h */,
+				656B7739A338CE17A99F5C6EB8445808 /* Pods-FleetPlayer.debug.xcconfig */,
+				D39D76AC4446B707B244177968390E37 /* Pods-FleetPlayer.release.xcconfig */,
+			);
+			name = "Pods-FleetPlayer";
+			path = "Target Support Files/Pods-FleetPlayer";
+			sourceTree = "<group>";
+		};
+		AFCA985C22DD6BEB769646CF41851AAC /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				C339E1A586DC433AB7D1CD97C5AB0E04 /* MMDrawerVisualState.h */,
+				4A9D03B5E9CF096B3ABD5A214D79ABA1 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		B0070509B7A23FC0E2F265D3A0FC602F /* Pods-FleetPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				244D8E925E6C812E2E9707942F71306E /* Info.plist */,
+				DAE4EB4EF4812BD92F87D168E1D7DC1D /* Pods-FleetPlayerTests.modulemap */,
+				CE29CFE16803D2655F4E0CA91EB72539 /* Pods-FleetPlayerTests-acknowledgements.markdown */,
+				CC6A41B574D1557AFB2037E450B4B295 /* Pods-FleetPlayerTests-acknowledgements.plist */,
+				FB68C786B03AE14EA20DC9B4C47715B7 /* Pods-FleetPlayerTests-dummy.m */,
+				3902BD670B40E0DA7C565A3DD855CFA6 /* Pods-FleetPlayerTests-frameworks.sh */,
+				9D3090F2C5A4B630E04C73FD0A84409C /* Pods-FleetPlayerTests-resources.sh */,
+				3127DA59B28AFDF90F05122A78E17119 /* Pods-FleetPlayerTests-umbrella.h */,
+				AAFFD15712802F951B0CFA05DFFF9B67 /* Pods-FleetPlayerTests.debug.xcconfig */,
+				8F72138911AB906B96A699D9711E7001 /* Pods-FleetPlayerTests.release.xcconfig */,
+			);
+			name = "Pods-FleetPlayerTests";
+			path = "Target Support Files/Pods-FleetPlayerTests";
+			sourceTree = "<group>";
+		};
+		B0E2A1410F3708180AF257BB7396AEB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652C54CAC4A01BAAF3C26F084FD48BB5 /* MMDrawerController.framework */,
+				048536F4F74DC8896BB0C10A56D939E8 /* Pods_FleetPlayer.framework */,
+				1BF4887878A7E8B87E842F22BAE92681 /* Pods_FleetPlayerTests.framework */,
+				31C75950421C6F43D4DB28FF00C53B6B /* Pods_FleetPlayerUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2FB78D9D3DCBCAD0E614BA4C702E769 /* Pods-FleetPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				82A3C97FF135CA8351EE4DD771D506B9 /* Info.plist */,
+				C911A1FBA45149DDEFFECE09E0BBDA76 /* Pods-FleetPlayerUITests.modulemap */,
+				108985B01C6CC4CB53C8106C2E5B6B02 /* Pods-FleetPlayerUITests-acknowledgements.markdown */,
+				5D46D5FFDE0F8C98C47384113CCD6842 /* Pods-FleetPlayerUITests-acknowledgements.plist */,
+				8F6E4533727D6F9D64475B89697A59A7 /* Pods-FleetPlayerUITests-dummy.m */,
+				2F5FD73AEA870DE8B98FD11056FC73BF /* Pods-FleetPlayerUITests-frameworks.sh */,
+				482DE86642E6B4EC8EE28571E3B4765D /* Pods-FleetPlayerUITests-resources.sh */,
+				420636594C6473805E110103A3EB1948 /* Pods-FleetPlayerUITests-umbrella.h */,
+				6B046B9266A41ECE75F829589484F860 /* Pods-FleetPlayerUITests.debug.xcconfig */,
+				02DC0AB35A94F69B92E2710BA0C3D498 /* Pods-FleetPlayerUITests.release.xcconfig */,
+			);
+			name = "Pods-FleetPlayerUITests";
+			path = "Target Support Files/Pods-FleetPlayerUITests";
+			sourceTree = "<group>";
+		};
+		B49D6952197F2166796788CEFC5BC44E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6ADB96113EE88258872A9C18F105CC4D /* MMDrawerController.h */,
+				BF0F369A6FD48C8B59CA6BD9E9873D31 /* MMDrawerController.m */,
+				7D0967FD797BDF9D71858017DC813592 /* MMDrawerController+Subclass.h */,
+				FB83686ED4EF30E64EE94A44CD0DE8BF /* UIViewController+MMDrawerController.h */,
+				97EEE04DBF803BBDE79530E2603E0D13 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00E5EF191B629DD2DAC36E436D1646DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C12275778E35458AC23F5F68706A44D2 /* Pods-FleetPlayerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		079E9ACE8A655D5FED855E204442BDBD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2550DF6FF42DCDC754EA66884350A548 /* MMDrawerBarButtonItem.h in Headers */,
+				00AB9667C6E85C84AA87F4055C95475D /* MMDrawerController+Subclass.h in Headers */,
+				A839EBBBCA86D330FC9C0638452877F0 /* MMDrawerController-umbrella.h in Headers */,
+				2C0E7B14F4D9D011CDD02BE012EA02A5 /* MMDrawerController.h in Headers */,
+				A071D0EC0B86BECDB1F5D44511AB4E1A /* MMDrawerVisualState.h in Headers */,
+				CAE2EF6171328E8B33AE6E7A2E96597B /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C97CBBCEFA000C09B5947EB81A1957 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B58F28F1DB21F877D737EE5787438DE /* Pods-FleetPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		724D150E4655B003809AA5E9A31F4D84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F6C6B453AF24E19708028B08F18CD8 /* Pods-FleetPlayerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1DA9D30F049BD308184DFC9041049C42 /* Pods-FleetPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4367DB5190C687A832CA72FED3CA64F4 /* Build configuration list for PBXNativeTarget "Pods-FleetPlayerUITests" */;
+			buildPhases = (
+				A05E82E5EEC6E2AB5121376E28F85734 /* Sources */,
+				70AD8E29B59EE7EACA412A626DD65A48 /* Frameworks */,
+				724D150E4655B003809AA5E9A31F4D84 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FleetPlayerUITests";
+			productName = "Pods-FleetPlayerUITests";
+			productReference = 31C75950421C6F43D4DB28FF00C53B6B /* Pods_FleetPlayerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F72886366DB46C063767409A29C4037 /* Pods-FleetPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94005FA322E9F7F49EC516597D85FF14 /* Build configuration list for PBXNativeTarget "Pods-FleetPlayerTests" */;
+			buildPhases = (
+				1FC183B1D31DCCBD8599F009172A7FCF /* Sources */,
+				98C51271A2160D33EE00126B25D3631A /* Frameworks */,
+				00E5EF191B629DD2DAC36E436D1646DF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FleetPlayerTests";
+			productName = "Pods-FleetPlayerTests";
+			productReference = 1BF4887878A7E8B87E842F22BAE92681 /* Pods_FleetPlayerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410F9B5264E3B131C74C0402F62B1BFE /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
+			buildPhases = (
+				1AC8283747C7D044F7E6743D804C3D89 /* Sources */,
+				AE46F03F680D2CA1FFC849F4A1D92B53 /* Frameworks */,
+				079E9ACE8A655D5FED855E204442BDBD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMDrawerController;
+			productName = MMDrawerController;
+			productReference = 652C54CAC4A01BAAF3C26F084FD48BB5 /* MMDrawerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C22D583818B71CBD54021899897C2BC7 /* Pods-FleetPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 436EB17F01A5A7383E1BE50B96B76FFE /* Build configuration list for PBXNativeTarget "Pods-FleetPlayer" */;
+			buildPhases = (
+				F40406726565DE64BBC00AABE8D9B86B /* Sources */,
+				8128762267F6C04D47E8E65F4E261934 /* Frameworks */,
+				53C97CBBCEFA000C09B5947EB81A1957 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8603717FFCAF6818253767995715C2F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-FleetPlayer";
+			productName = "Pods-FleetPlayer";
+			productReference = 048536F4F74DC8896BB0C10A56D939E8 /* Pods_FleetPlayer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B0E2A1410F3708180AF257BB7396AEB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */,
+				C22D583818B71CBD54021899897C2BC7 /* Pods-FleetPlayer */,
+				6F72886366DB46C063767409A29C4037 /* Pods-FleetPlayerTests */,
+				1DA9D30F049BD308184DFC9041049C42 /* Pods-FleetPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AC8283747C7D044F7E6743D804C3D89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE6CF55F21915FE9194F67B7AFBFE4F /* MMDrawerBarButtonItem.m in Sources */,
+				4A6B67FBD446549DC0364E250EE3B781 /* MMDrawerController-dummy.m in Sources */,
+				3B8CBBEB4F30D9CBAF21AA0E4A724C67 /* MMDrawerController.m in Sources */,
+				87E9DF92EC59F187381F74D34ECC797D /* MMDrawerVisualState.m in Sources */,
+				63AFE0ED1CBD542FEF26CFE3053F100C /* UIViewController+MMDrawerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC183B1D31DCCBD8599F009172A7FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72DC0DC15510997942C1D4DA96D4AD4 /* Pods-FleetPlayerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A05E82E5EEC6E2AB5121376E28F85734 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49693EA9DF0E0895C45A690C0BA47402 /* Pods-FleetPlayerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F40406726565DE64BBC00AABE8D9B86B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3BE78766D1EDD211A7FEE5419F21ED /* Pods-FleetPlayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8603717FFCAF6818253767995715C2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMDrawerController;
+			target = 96D3562E47E4792B0A6093A0323EB398 /* MMDrawerController */;
+			targetProxy = F6D41C9B29778ACAA731DE5A44B6138D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09B6DCCC10F5D75396205FB62C36ECED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F72138911AB906B96A699D9711E7001 /* Pods-FleetPlayerTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BC862293915C25941D9A32197E84158 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0156781BD54D08196D7CC7A13B5FCEC0 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMDrawerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMDrawerController/MMDrawerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MMDrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DA54D7C43B1782D1F073E390BCB81CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAFFD15712802F951B0CFA05DFFF9B67 /* Pods-FleetPlayerTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8424B0685E9B3C0AB62EE57062DA920D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D39D76AC4446B707B244177968390E37 /* Pods-FleetPlayer.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9C7B6470877919B8CBB9AA4061306EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B046B9266A41ECE75F829589484F860 /* Pods-FleetPlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayerUITests/Pods-FleetPlayerUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayerUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9F0A6AD934BDF9BEE7AE6CB051AAB7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0156781BD54D08196D7CC7A13B5FCEC0 /* MMDrawerController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMDrawerController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMDrawerController/MMDrawerController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MMDrawerController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D82C7201EC993DBDE08BA4684B2725B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02DC0AB35A94F69B92E2710BA0C3D498 /* Pods-FleetPlayerUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayerUITests/Pods-FleetPlayerUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayerUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F95F5FAC968D033FC2EBD0BE36CC1A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 656B7739A338CE17A99F5C6EB8445808 /* Pods-FleetPlayer.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FleetPlayer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FleetPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410F9B5264E3B131C74C0402F62B1BFE /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9F0A6AD934BDF9BEE7AE6CB051AAB7D /* Debug */,
+				4BC862293915C25941D9A32197E84158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4367DB5190C687A832CA72FED3CA64F4 /* Build configuration list for PBXNativeTarget "Pods-FleetPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C7B6470877919B8CBB9AA4061306EC /* Debug */,
+				D82C7201EC993DBDE08BA4684B2725B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		436EB17F01A5A7383E1BE50B96B76FFE /* Build configuration list for PBXNativeTarget "Pods-FleetPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F95F5FAC968D033FC2EBD0BE36CC1A6E /* Debug */,
+				8424B0685E9B3C0AB62EE57062DA920D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94005FA322E9F7F49EC516597D85FF14 /* Build configuration list for PBXNativeTarget "Pods-FleetPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DA54D7C43B1782D1F073E390BCB81CE /* Debug */,
+				09B6DCCC10F5D75396205FB62C36ECED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

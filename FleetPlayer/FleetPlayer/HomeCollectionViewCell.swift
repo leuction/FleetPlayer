@@ -16,30 +16,22 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
-    var isEditable:Bool = false {
+    var isEditable:Bool! {
         didSet {
-            updateUI()
+            if isEditable!{
+                deleteButton.hidden = false
+            } else {
+                deleteButton.hidden = true
+            }
         }
     }
     
     var videoInformation: VideoInformation!{
         didSet {
-            updateUI()
+            videoImage.image! = videoInformation.featuredImage
+            videoImage.contentMode = .ScaleAspectFill
+            videoTitle.text! = videoInformation.title
         }
     }
-    func updateUI(){
-        videoImage.image! = videoInformation.featuredImage
-        videoImage.contentMode = .ScaleAspectFill
-        videoTitle.text! = videoInformation.title
-        if isEditable{
-            deleteButton.hidden = false
-        } else {
-            deleteButton.hidden = true
-        }
-        print(videoImage.frame.width / videoImage.frame.height)
-    }
-    
-    
-    
-    
+ 
 }

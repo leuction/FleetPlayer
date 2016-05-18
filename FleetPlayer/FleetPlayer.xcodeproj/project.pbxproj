@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2375A3032899BF179C4B9448 /* Pods_FleetPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECDA256CF5BFE36A3DD22AD /* Pods_FleetPlayer.framework */; };
+		35BA427C729D954D8E2BC026 /* Pods_FleetPlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035D8AD4BAC9F9FB18293ABC /* Pods_FleetPlayerUITests.framework */; };
+		B7214F461CEC30F4004C4022 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7214F451CEC30F4004C4022 /* LeftSideViewController.swift */; };
+		B7214F481CEC3F24004C4022 /* MusicInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7214F471CEC3F24004C4022 /* MusicInformation.swift */; };
+		B7214F4A1CEC578A004C4022 /* MusicHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7214F491CEC578A004C4022 /* MusicHomeViewController.swift */; };
+		B7214F4C1CEC5CE8004C4022 /* MusicHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7214F4B1CEC5CE8004C4022 /* MusicHomeCollectionViewCell.swift */; };
 		B7475E721CCE2A4B00F05F40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */; };
 		B7475E741CCE2A4B00F05F40 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */; };
 		B7475E771CCE2A4B00F05F40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7475E751CCE2A4B00F05F40 /* Main.storyboard */; };
@@ -18,6 +24,7 @@
 		B7482F0D1CDC20FE009AB8FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482F0C1CDC20FE009AB8FF /* HomeViewController.swift */; };
 		B7482F0F1CDC37BF009AB8FF /* VideoInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482F0E1CDC37BF009AB8FF /* VideoInformation.swift */; };
 		B7482F131CDC703E009AB8FF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482F121CDC703E009AB8FF /* HomeCollectionViewCell.swift */; };
+		DBE3387C9B10F6E2488860F4 /* Pods_FleetPlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13C5DFCF94F0E73DEEE41C0 /* Pods_FleetPlayerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035D8AD4BAC9F9FB18293ABC /* Pods_FleetPlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03A9CB644C8EE6A3FC9B232A /* Pods-FleetPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		3B2291EE22C3321BB5F5B49B /* Pods-FleetPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayerUITests/Pods-FleetPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DCB1A3851BDDB7231BCFB12 /* Pods-FleetPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayerUITests/Pods-FleetPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5FFDBADCA4F73D0332ED6B0B /* Pods-FleetPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6ECDA256CF5BFE36A3DD22AD /* Pods_FleetPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2F4A1AB08F6130A388065B /* Pods-FleetPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		AAF999696D7AB7AFDD2C04C2 /* Pods-FleetPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FleetPlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7214F3B1CEC1D6E004C4022 /* FleetPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FleetPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7214F451CEC30F4004C4022 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
+		B7214F471CEC3F24004C4022 /* MusicInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicInformation.swift; sourceTree = "<group>"; };
+		B7214F491CEC578A004C4022 /* MusicHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicHomeViewController.swift; sourceTree = "<group>"; };
+		B7214F4B1CEC5CE8004C4022 /* MusicHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7475E6E1CCE2A4B00F05F40 /* FleetPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FleetPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +75,7 @@
 		B7482F0C1CDC20FE009AB8FF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B7482F0E1CDC37BF009AB8FF /* VideoInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoInformation.swift; sourceTree = "<group>"; };
 		B7482F121CDC703E009AB8FF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C13C5DFCF94F0E73DEEE41C0 /* Pods_FleetPlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FleetPlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2375A3032899BF179C4B9448 /* Pods_FleetPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE3387C9B10F6E2488860F4 /* Pods_FleetPlayerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +99,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BA427C729D954D8E2BC026 /* Pods_FleetPlayerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B69CEA4B5D59DD8EF9F72D90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ECDA256CF5BFE36A3DD22AD /* Pods_FleetPlayer.framework */,
+				C13C5DFCF94F0E73DEEE41C0 /* Pods_FleetPlayerTests.framework */,
+				035D8AD4BAC9F9FB18293ABC /* Pods_FleetPlayerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7475E651CCE2A4B00F05F40 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +123,8 @@
 				B7475E881CCE2A4B00F05F40 /* FleetPlayerTests */,
 				B7475E931CCE2A4B00F05F40 /* FleetPlayerUITests */,
 				B7475E6F1CCE2A4B00F05F40 /* Products */,
+				D0070F3ECCFDA65E588E7665 /* Pods */,
+				B69CEA4B5D59DD8EF9F72D90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,15 +142,20 @@
 			isa = PBXGroup;
 			children = (
 				B7475E751CCE2A4B00F05F40 /* Main.storyboard */,
-				B7482F0E1CDC37BF009AB8FF /* VideoInformation.swift */,
 				B7475E711CCE2A4B00F05F40 /* AppDelegate.swift */,
+				B7482F0E1CDC37BF009AB8FF /* VideoInformation.swift */,
+				B7214F471CEC3F24004C4022 /* MusicInformation.swift */,
 				B7475E731CCE2A4B00F05F40 /* VideoPlayerViewController.swift */,
 				B7482F0C1CDC20FE009AB8FF /* HomeViewController.swift */,
 				B7482F121CDC703E009AB8FF /* HomeCollectionViewCell.swift */,
+				B7214F491CEC578A004C4022 /* MusicHomeViewController.swift */,
+				B7214F4B1CEC5CE8004C4022 /* MusicHomeCollectionViewCell.swift */,
+				B7214F451CEC30F4004C4022 /* LeftSideViewController.swift */,
 				B7475E7B1CCE2A4B00F05F40 /* Assets.xcassets */,
 				B7475E7D1CCE2A4B00F05F40 /* LaunchScreen.storyboard */,
 				B7475E801CCE2A4B00F05F40 /* Info.plist */,
 				B7475E781CCE2A4B00F05F40 /* FleetPlayer.xcdatamodeld */,
+				B7214F3B1CEC1D6E004C4022 /* FleetPlayer-Bridging-Header.h */,
 			);
 			path = FleetPlayer;
 			sourceTree = "<group>";
@@ -137,6 +178,19 @@
 			path = FleetPlayerUITests;
 			sourceTree = "<group>";
 		};
+		D0070F3ECCFDA65E588E7665 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B2F4A1AB08F6130A388065B /* Pods-FleetPlayer.debug.xcconfig */,
+				03A9CB644C8EE6A3FC9B232A /* Pods-FleetPlayer.release.xcconfig */,
+				5FFDBADCA4F73D0332ED6B0B /* Pods-FleetPlayerTests.debug.xcconfig */,
+				AAF999696D7AB7AFDD2C04C2 /* Pods-FleetPlayerTests.release.xcconfig */,
+				3B2291EE22C3321BB5F5B49B /* Pods-FleetPlayerUITests.debug.xcconfig */,
+				3DCB1A3851BDDB7231BCFB12 /* Pods-FleetPlayerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7475E991CCE2A4B00F05F40 /* Build configuration list for PBXNativeTarget "FleetPlayer" */;
 			buildPhases = (
+				A8E5E156AABB8A7FCA1764B1 /* 📦 Check Pods Manifest.lock */,
 				B7475E6A1CCE2A4B00F05F40 /* Sources */,
 				B7475E6B1CCE2A4B00F05F40 /* Frameworks */,
 				B7475E6C1CCE2A4B00F05F40 /* Resources */,
+				D622ADD97893D2C8A7BDFBD7 /* 📦 Embed Pods Frameworks */,
+				A82DC458B7F2CD5B5BD9B0BF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7475E9C1CCE2A4B00F05F40 /* Build configuration list for PBXNativeTarget "FleetPlayerTests" */;
 			buildPhases = (
+				BA56E8300F6B6606D1B1B5A1 /* 📦 Check Pods Manifest.lock */,
 				B7475E811CCE2A4B00F05F40 /* Sources */,
 				B7475E821CCE2A4B00F05F40 /* Frameworks */,
 				B7475E831CCE2A4B00F05F40 /* Resources */,
+				164D69F9F19E6E680BA664CC /* 📦 Embed Pods Frameworks */,
+				85E2EFC26AF97DCE1E63FF9A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7475E9F1CCE2A4B00F05F40 /* Build configuration list for PBXNativeTarget "FleetPlayerUITests" */;
 			buildPhases = (
+				5E7FC3B4CAE34C7554729D95 /* 📦 Check Pods Manifest.lock */,
 				B7475E8C1CCE2A4B00F05F40 /* Sources */,
 				B7475E8D1CCE2A4B00F05F40 /* Frameworks */,
 				B7475E8E1CCE2A4B00F05F40 /* Resources */,
+				12C3EEEB800C3047CB109B6D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,12 +328,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12C3EEEB800C3047CB109B6D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FleetPlayerUITests/Pods-FleetPlayerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		164D69F9F19E6E680BA664CC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E7FC3B4CAE34C7554729D95 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85E2EFC26AF97DCE1E63FF9A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FleetPlayerTests/Pods-FleetPlayerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A82DC458B7F2CD5B5BD9B0BF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E5E156AABB8A7FCA1764B1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA56E8300F6B6606D1B1B5A1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D622ADD97893D2C8A7BDFBD7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FleetPlayer/Pods-FleetPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7475E6A1CCE2A4B00F05F40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7214F481CEC3F24004C4022 /* MusicInformation.swift in Sources */,
+				B7214F4C1CEC5CE8004C4022 /* MusicHomeCollectionViewCell.swift in Sources */,
+				B7214F4A1CEC578A004C4022 /* MusicHomeViewController.swift in Sources */,
 				B7475E7A1CCE2A4B00F05F40 /* FleetPlayer.xcdatamodeld in Sources */,
+				B7214F461CEC30F4004C4022 /* LeftSideViewController.swift in Sources */,
 				B7482F0F1CDC37BF009AB8FF /* VideoInformation.swift in Sources */,
 				B7475E741CCE2A4B00F05F40 /* VideoPlayerViewController.swift in Sources */,
 				B7475E721CCE2A4B00F05F40 /* AppDelegate.swift in Sources */,
@@ -418,28 +607,36 @@
 		};
 		B7475E9A1CCE2A4B00F05F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B2F4A1AB08F6130A388065B /* Pods-FleetPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FleetPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leuction.FleetPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FleetPlayer/FleetPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B7475E9B1CCE2A4B00F05F40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A9CB644C8EE6A3FC9B232A /* Pods-FleetPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FleetPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leuction.FleetPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FleetPlayer/FleetPlayer-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		B7475E9D1CCE2A4B00F05F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FFDBADCA4F73D0332ED6B0B /* Pods-FleetPlayerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FleetPlayerTests/Info.plist;
@@ -452,6 +649,7 @@
 		};
 		B7475E9E1CCE2A4B00F05F40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF999696D7AB7AFDD2C04C2 /* Pods-FleetPlayerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FleetPlayerTests/Info.plist;
@@ -464,6 +662,7 @@
 		};
 		B7475EA01CCE2A4B00F05F40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2291EE22C3321BB5F5B49B /* Pods-FleetPlayerUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FleetPlayerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -475,6 +674,7 @@
 		};
 		B7475EA11CCE2A4B00F05F40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DCB1A3851BDDB7231BCFB12 /* Pods-FleetPlayerUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FleetPlayerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

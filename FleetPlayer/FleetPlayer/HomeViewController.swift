@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MMDrawerController
 
 class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var isVideoCellEditable: Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        isVideoCellEditable = false
         
         navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         navigationController?.navigationBar.translucent = true
@@ -40,9 +43,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         // prevent the collection view be blocked by th navigation bar
         self.edgesForExtendedLayout = UIRectEdge.None
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        
     }
 
     private var videoInformation = VideoInformation.travelsalAllFilesInDocument()
+    
+    
+    
     //private var videoInformation = [VideoInformation(title: "1", featuredImage: UIImage(named: "p2"), url: NSURL(fileURLWithPath: "123"))]
     
     func editVideoFiles(sender: UILongPressGestureRecognizer) {
@@ -56,7 +64,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             for cell in (self.collectionView.visibleCells() as? [HomeCollectionViewCell])!{
                 
-                cell.isEditable = true
+                isVideoCellEditable = true
+                cell.isEditable = isVideoCellEditable
             
             }
         }
@@ -64,12 +73,18 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func cancelEditVideoFiles(sender: UITapGestureRecognizer) {
         for cell in (self.collectionView.visibleCells() as? [HomeCollectionViewCell])! {
-            if cell.isEditable {
-                cell.isEditable = false
+            if cell.isEditable! {
+                isVideoCellEditable = false
+                cell.isEditable = isVideoCellEditable
             }
         }
     }
     
+    @IBAction func leftSideButtonTapped(sender: UIBarButtonItem) {
+        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.centerContainer?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
     
     
     
@@ -89,8 +104,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! HomeCollectionViewCell
+        cell.isEditable = isVideoCellEditable
         cell.videoInformation = self.videoInformation[indexPath.item]
-        cell.isEditable = false
         return cell
     }
     
