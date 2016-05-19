@@ -9,15 +9,20 @@
 import UIKit
 import CoreData
 import MMDrawerController
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var centerContainer: MMDrawerController?
+    var avPlayer: AVPlayer?
+    var isPlayerItemLoaded = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        avPlayer = AVPlayer()
         
         var rootViewController = self.window!.rootViewController
         

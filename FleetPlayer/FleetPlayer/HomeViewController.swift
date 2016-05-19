@@ -151,9 +151,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        let p: CGPoint =  touch.locationInView(self.view)
-        for cell in self.collectionView.visibleCells(){
-            if CGRectContainsPoint(cell.frame, p) {
+        if let touchView = touch.view{
+            if touchView.isDescendantOfView(self.collectionView){
                 return false
             }
         }

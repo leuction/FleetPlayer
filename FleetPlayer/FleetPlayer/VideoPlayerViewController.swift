@@ -13,7 +13,7 @@ class VideoPlayerViewController: UIViewController {
     var videoInformation: VideoInformation!
     var isInternetVideoSource = false
     var playerItem: AVPlayerItem!
-    var avPlayer = AVPlayer()
+    var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var timeObserver: AnyObject!
     @IBOutlet weak var timePassedLabel: UILabel!
@@ -29,6 +29,9 @@ class VideoPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        avPlayer = appDelegate.avPlayer
         
         // add the player layer
         
@@ -167,6 +170,8 @@ class VideoPlayerViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         avPlayer.pause()
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.isPlayerItemLoaded = false
     }
     
     

@@ -17,7 +17,7 @@ class MusicHomeViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var seekSlider: UISlider!
     @IBOutlet weak var playControlButton: UIButton!
     var isMusicCellEditable: Bool!
-    var musicPlayer = AVPlayer()
+    var musicPlayer: AVPlayer!
     var playerItem: AVPlayerItem!
     var isMusicLoaded: Bool!
     var timeObserver: AnyObject!
@@ -26,8 +26,10 @@ class MusicHomeViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        musicPlayer = appDelegate.avPlayer
         isMusicCellEditable = false
-        isMusicLoaded = false
+        isMusicLoaded = appDelegate.isPlayerItemLoaded
         
         navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         navigationController?.navigationBar.translucent = true
