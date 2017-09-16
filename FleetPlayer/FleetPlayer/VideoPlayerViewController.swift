@@ -6,6 +6,8 @@
 //  Copyright © 2016 硕 王. All rights reserved.
 //
 
+// 很长时间之前写的代码，主要作出demo利用AVFoundation加上自己的控件来控制播放
+
 import UIKit
 import AVFoundation
 
@@ -49,11 +51,10 @@ class VideoPlayerViewController: UIViewController {
         
         //control the URL of the video source
         
-        if isInternetVideoSource
-        {
+        if isInternetVideoSource {
             let url = NSURL(string: "http://images.apple.com/media/cn/ipad-pro/2016/8242d954_d694_42b8_b6b7_a871bba6ed54/films/feature/ipadpro-9-7inch-feature-cn-20160321_1280x720h.mp4");
             playerItem = AVPlayerItem(URL: url!)
-        }else{
+        } else {
             let url = videoInformation.url
             playerItem = AVPlayerItem(URL: url)
         }
@@ -102,11 +103,11 @@ class VideoPlayerViewController: UIViewController {
     
     //double tap the view to start or pause the video
     
-    func startOrPauseTheVideo(sender: UITapGestureRecognizer){
+    func startOrPauseTheVideo(sender: UITapGestureRecognizer) {
         let playerIsPlaying:Bool = avPlayer.rate > 0
-        if(playerIsPlaying){
+        if (playerIsPlaying) {
             avPlayer.pause()
-        }else{
+        } else {
             avPlayer.play()
         }
         
@@ -114,13 +115,13 @@ class VideoPlayerViewController: UIViewController {
     
     //single tap to hide or show the user interface
     
-    func hideOrShowUserInterface(sender: UITapGestureRecognizer){
+    func hideOrShowUserInterface(sender: UITapGestureRecognizer) {
         timeRemainingLabel.hidden = !timeRemainingLabel.hidden
         seekSlider.hidden = !seekSlider.hidden
         timePassedLabel.hidden = !timePassedLabel.hidden
         if (navigationController?.navigationBarHidden)!{
             navigationController?.setNavigationBarHidden(false, animated: true)
-        }else{
+        } else {
             navigationController?.setNavigationBarHidden(true, animated: true)
         }
     }
